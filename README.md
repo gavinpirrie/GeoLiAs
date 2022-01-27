@@ -1,6 +1,6 @@
-# geemap-heroku
+# GeoLiAS
 
-Python scripts for deploying Earth Engine Apps to heroku, try it out: <https://geemap-demo.herokuapp.com/>
+Geologic lineament analysis using imagery leveraged through Google Earth Engine, try it out: <https://mongo-lin-gee.herokuapp.com>
 
 ## How to deploy your own Earth Engine Apps?
 
@@ -29,4 +29,4 @@ Python scripts for deploying Earth Engine Apps to heroku, try it out: <https://g
 
 ## Credits
 
-The instructions above on how to deploy a voila application on heroku are adapted from [voila-dashboards/voila-heroku](https://github.com/voila-dashboards/voila-heroku).
+Instructions on how to deploy Earth Engine Apps on heroku are [here] (https://mongo-lin-gee.herokuapp.com)
