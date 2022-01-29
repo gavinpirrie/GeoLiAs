@@ -1,32 +1,26 @@
 # GeoLiAS
 
-Geologic lineament analysis using imagery leveraged through Google Earth Engine, try it out: <https://mongo-lin-gee.herokuapp.com>
+Geologic lineament analysis using imagery leveraged through Python, Heroku, and Google Earth Engine, try it out: <https://mongo-lin-gee.herokuapp.com>
 
-## How to deploy your own Earth Engine Apps?
+## Introduction
+**GeoLiAs** is an app that utilizes [Google Earth Engine](https://developers.google.com/earth-engine/) and the Python package [geemap](https://github.com/giswqs/geemap) to analyze imagery for lineaments.
 
-- [Sign up](https://signup.heroku.com/) for a free heroku account.
-- Follow the [instructions](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) to install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and Heroku Command Line Interface (CLI).
-- Authenticate heroku using the `heroku login` command.
-- Clone this repository: <https://github.com/giswqs/geemap-heroku>
-- Create your own Earth Engine notebook and put it under the `notebooks` directory.
-- Add Python dependencies in the `requirements.txt` file if needed.
-- Edit the `Procfile` file by replacing `notebooks/geemap.ipynb` with the path to your own notebook.
-- Commit changes to the repository by using `git add . && git commit -am "message"`.
-- Create a heroku app: `heroku create`
-- Run the `config_vars.py` script to extract Earth Engine token from your computer and set it as an environment variable on heroku: `python config_vars.py`
-- Deploy your code to heroku: `git push heroku master`
-- Open your heroku app: `heroku open`
+Current data sources include [SRTM](https://developers.google.com/earth-engine/datasets/catalog/NASA_NASADEM_HGT_001?hl=en) and [Landsat 7](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C01_T1?hl=en).
 
-## Optional steps
+## Edge Detection
+Edges were detected using [Canny Edge Detector](https://developers.google.com/earth-engine/apidocs/ee-algorithms-cannyedgedetector?hl=en) and further analyzed using [Hough Transform](https://developers.google.com/earth-engine/apidocs/ee-algorithms-houghtransform?hl=en).
 
-- To specify a name for your app, use `heroku apps:create example`
-- To preview your app locally, use `heroku local web`
-- To hide code cells from your app, you can edit the `Procfile` file and set `--strip_sources=True`
-- To periodically check for idle kernels, you can edit the `Procfile` file and set `--MappingKernelManager.cull_interval=60 --MappingKernelManager.cull_idle_timeout=120`
-- To view information about your running app, use `heroku logs --tail`
-- To set an environment variable on heroku, use `heroku config:set NAME=VALUE`
-- To view environment variables for your app, use `heroku config`
+### Threshold
+The "Threshold" parameter designates the pixel for edge detection only if the gradient magnitude is higher than this value.
+### Sigma
+The "Sigma" parameter applies gaussian filter before edge detection. A value of "0" applies no filtering.
+
+## Roadmap of the Future
+* Ability import any shapefile
+* Add other data sources (additional Landsat, DEM sources, etc.)
+* Ability to import own imagery for edge detection
 
 ## Credits
+Thank you to Qiusheng Wu for creating [geemap](https://github.com/giswqs/geemap) and additional documentation and tutorials [here](https://github.com/giswqs).
 
-Instructions on how to deploy Earth Engine Apps on heroku are [here] (https://mongo-lin-gee.herokuapp.com)
+Instructions on how to deploy Earth Engine Apps on heroku are [here](https://github.com/giswqs/geemap-heroku)
