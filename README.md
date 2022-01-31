@@ -12,6 +12,7 @@ Edges were detected using [Canny Edge Detector](https://developers.google.com/ea
 
 ### Threshold
 The "Threshold" parameter designates the pixel for edge detection only if the gradient magnitude is higher than this value.
+
 ### Sigma
 The "Sigma" parameter applies gaussian filter before edge detection. A value of "0" applies no filtering.
 
