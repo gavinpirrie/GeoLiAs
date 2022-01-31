@@ -19,6 +19,7 @@ The "Sigma" parameter applies gaussian filter before edge detection. A value of 
 * Ability import any shapefile
 * Add other data sources (additional Landsat, DEM sources, etc.)
 * Ability to import own imagery for edge detection
+* Generalize for areas other than Mongolia
 
 ## Credits
 Thank you to Qiusheng Wu for creating [geemap](https://github.com/giswqs/geemap) and additional documentation and tutorials [here](https://github.com/giswqs).
