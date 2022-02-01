@@ -23,8 +23,10 @@ The "Sigma" parameter applies gaussian filter before edge detection. A value of 
 * Import local imagery for edge detection
 * ~~Generalize for areas other than Mongolia~~
 * Select dates for imagery (satellite specific?)
+* Resample edges/prevent re-scaling when zooming in
+* Export edges
 
 ## Credits
-Thank you to Qiusheng Wu for creating [geemap](https://github.com/giswqs/geemap) and additional documentation and tutorials [here](https://github.com/giswqs).
+Thank you to [Qiusheng Wu](https://github.com/giswqs) for creating [geemap](https://github.com/giswqs/geemap) and additional documentation and tutorials [here](https://github.com/giswqs).
 
-Instructions on how to deploy Earth Engine Apps on heroku are [here](https://github.com/giswqs/geemap-heroku)
+Instructions on how to deploy Earth Engine Apps on Heroku are [here](https://github.com/giswqs/geemap-heroku)
