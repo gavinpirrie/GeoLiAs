@@ -17,10 +17,12 @@ The "Threshold" parameter designates the pixel for edge detection only if the gr
 The "Sigma" parameter applies gaussian filter before edge detection. A value of "0" applies no filtering.
 
 ## Roadmap of the Future
-* Ability import any shapefile
-* Add other data sources (additional Landsat, DEM sources, etc.)
-* Ability to import own imagery for edge detection
-* Generalize for areas other than Mongolia
+* Import any shapefile
+* Clip to area/shapefile
+* Add other data sources (Landsat 5/8, DEM's, etc.)
+* Import local imagery for edge detection
+* ~~Generalize for areas other than Mongolia~~
+* Select dates for imagery (satellite specific?)
 
 ## Credits
 Thank you to Qiusheng Wu for creating [geemap](https://github.com/giswqs/geemap) and additional documentation and tutorials [here](https://github.com/giswqs).
